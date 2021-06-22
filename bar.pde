@@ -121,7 +121,7 @@ void st1_callibration() {
   println("State 1: Callibration - " + callibration_iteration);
   println("MAX: " + max);
   if ( callibration_iteration != 1) {
-    rect(width/2 - 25, height, 50, -((fitted_number/max) * height*height_factor ) ); //should be fitted_number, not raw_serial
+    rect(width/2 - 25, height, 50, -(fitted_number * height*height_factor/max)  ) ; //should be fitted_number, not raw_serial
   }
   
   if ( (raw_serial > temp_max) || (raw_serial < lower_bound) ){
